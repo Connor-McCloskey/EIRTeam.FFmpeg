@@ -93,10 +93,10 @@ FFMPEG_PREFIX:=thirdparty/ffmpeg/$(PLATFORM)/$(PREFIX_ARCH)
 bootstrap:
 ifneq (,$(filter $(HOST), Darwin))
 	@echo "Bootstrapping for macOS..."
-	brew install autoconf automake libtool pkg-config curl cmake gperf groff texinfo yasm nasm bison autogen git wget meson ninja guile
+	brew install autoconf automake libtool pkg-config curl cmake gperf groff texinfo yasm nasm bison autogen git wget meson ninja-build guile
 else ifneq (,$(filter $(HOST), Linux))
 	@echo "Bootstrapping for Linux..."
-	sudo apt install autoconf automake libtool pkg-config curl cmake gperf groff texinfo yasm nasm bison autogen git wget meson ninja rapidjson-dev
+	sudo apt install autoconf automake libtool pkg-config curl cmake gperf groff texinfo yasm nasm bison autogen git wget meson ninja-build rapidjson-dev
 endif
 
 
